@@ -1,0 +1,1 @@
+# Trabalha com a base de dados, prepara os dados

@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.1.2"
+flask-restx = "^0.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+coverage = "^6.3.3"
+poethepoet = "^0.13.1"
+pytest-cov = "*"
+blue = "0.5.2"
+flake8 = "*"
+flake8-debugger = "*"
+flake8-pytest-style = "*"
+isort = "*"
+mypy = "*"
+pep8-naming = "*"
+pyupgrade = "*"
+bandit = "*"
+pip-audit = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks.cove_tests]
+cmd = "poetry run coverage run -m pytest"
+help = "Run tests your project"
+
+[tool.poe.tasks.cove_report]
+cmd = "poetry run coverage report"
+help = "Reports on the test coverage"
+
+[tool.poe.tasks.cove_html]
+cmd = "poetry run coverage html"
+help = "Generates HTML reports on the test coverage"
+
+[tool.poe.tasks.start]
+cmd = "python3 src/main.py"
+help = "Starts the application"
