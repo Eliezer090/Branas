@@ -1,1 +1,0 @@
-# Pasta onde contém módulos resposáveis por realizar validacoes.

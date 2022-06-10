@@ -1,1 +1,0 @@
-# Pega o que o controller fez e monta a extrutura que será retornado para o usuário.

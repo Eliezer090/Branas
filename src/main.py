@@ -1,8 +1,7 @@
+from flask import Flask
+from src.configuration import configure_inject
+from src.web.pedido import pedidos
 
-from controller.Server.instance import Server
-from controller.Routers.routers import Routers
-
-if __name__ == '__main__':
-    print('Iniciando aplicação')
-    server = Server()
-    server.run()
+app = Flask(__name__)
+configure_inject(app)
+app.register_blueprint(pedidos(), url_prefix='/api')

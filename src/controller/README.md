@@ -1,1 +1,0 @@
-# Recebe a requisição e trabalha ela, vendo o que precisa ser feito para onde vai etc.
