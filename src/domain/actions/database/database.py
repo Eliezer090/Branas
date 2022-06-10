@@ -13,3 +13,7 @@ class DatabaseActions:
     @inject.autoparams()
     def get_next_id(self, database: DatabaseInterface) -> int:
         return database.get_next_id(self)
+
+    @inject.autoparams('database')
+    def post_pedido(self, pedido: Pedido, database: DatabaseInterface) -> List[Pedido]:
+        return database.post_pedido(self, pedido)

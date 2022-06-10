@@ -10,4 +10,5 @@ class PostPedido:
         self.__pedinterface = pedidointerface
 
     def execute(self, pedido: Pedido) -> List[Pedido]:
-        return self.__pedinterface.post_pedido(self, pedido)
+
+        return self.__pedinterface.post_pedido(pedido)

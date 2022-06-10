@@ -12,9 +12,11 @@ class PedidoUseCase(PedidoInterface):
 
     def getPedidosList(self) -> List[Pedido]:
         print("GetPedido_usecase")
-        return self.databaseAction.get_pedidos(self)
+        return self.databaseAction.get_pedidos()
 
     def post_pedido(self, pedido: Pedido) -> List[Pedido]:
-        if pedido.id < 5:
-            pedido.id = self.databaseAction.get_next_id()
+        # databaseAction =
+        # if pedido.id < 5:
+        #    pedido.id = databaseAction.get_next_id()
+        print("PedidoUseCase_post_pedido", pedido)
         return self.databaseAction.post_pedido(pedido)
